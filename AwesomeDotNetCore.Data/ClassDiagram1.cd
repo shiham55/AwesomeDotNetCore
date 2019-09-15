@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="AwesomeDotNetCore.Data.Models.Address" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACAAgAAAAIIAEAAAAAAgAIAAAAAAAAAgCQAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.AddressType" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAgQAAAAAAAAAAgCAAAA=</HashCode>
+      <FileName>Models\AddressType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.AwbuildVersion" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAACAAAAAAAAAAAgAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\AwbuildVersion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.BillOfMaterials" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAECAAAEAAgAgAAAACgCABACEAAAAA=</HashCode>
+      <FileName>Models\BillOfMaterials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.BusinessEntity" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAgAAAABACAAAAwCAQAA=</HashCode>
+      <FileName>Models\BusinessEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.BusinessEntityAddress" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIAAAAAAAAAAAAAAgQAAAACCAAAAASAAAA=</HashCode>
+      <FileName>Models\BusinessEntityAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.BusinessEntityContact" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAIAEAAEAAEAAAAAAgAAAAAACAAAAACAAAA=</HashCode>
+      <FileName>Models\BusinessEntityContact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ContactType" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAQAAgAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Models\ContactType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.CountryRegion" Collapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAgAAACAAAAAAAAAIgAA=</HashCode>
+      <FileName>Models\CountryRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.CountryRegionCurrency" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAEAAAAIAAA=</HashCode>
+      <FileName>Models\CountryRegionCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.CreditCard" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAgACAAAAAAAAAAAAAAAAggAAAAAAAACCCAAAAA=</HashCode>
+      <FileName>Models\CreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Culture" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAQAAgAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Models\Culture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Currency" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAgAAAQAAAAQAAgAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\Currency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.CurrencyRate" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAEAAgAAgBCAAAAQCAAAAAQ=</HashCode>
+      <FileName>Models\CurrencyRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Customer" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAEAEgAggAABAAAAAACQCAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.DatabaseLog" Collapsed="true">
+    <Position X="26.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAQAAAAAAAAhAAAAAAAEAgAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\DatabaseLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Department" Collapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAEAQAAgAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.EmailAddress" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAEAABAAAAAAAAAgAAAAAACAAAAACAAAA=</HashCode>
+      <FileName>Models\EmailAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Employee" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQCAhQIAAAGAAAEAEwQAAiACAAAACAAACAiIAAA=</HashCode>
+      <FileName>Models\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.EmployeeDepartmentHistory" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgAgAAAAAAAAgEgAAAAAACAAAAEAAAAA=</HashCode>
+      <FileName>Models\EmployeeDepartmentHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.EmployeePayHistory" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIAAEAAABAAAAAAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\EmployeePayHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ErrorLog" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAAAAAAAAgAgAAoAAAAAAAAAQAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Illustration" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Illustration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.JobCandidate" Collapsed="true">
+    <Position X="26.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAIAAAAAAAAAAAAAAgAAAAAACAAAAAgAAAA=</HashCode>
+      <FileName>Models\JobCandidate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Location">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAAAAAAAAAAAAAACBAAQAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Password" Collapsed="true">
+    <Position X="28" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAIAAAAAAAAAAAAAAgAAAAAACAAAAACAAAA=</HashCode>
+      <FileName>Models\Password.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Person" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAASIAAEAAIAAQAAAACgAAAEBCDCACAgCAQAg=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.PersonCreditCard" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAIAAAAAAQAAAAAAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\PersonCreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.PersonPhone" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAIAAEAAAAAAQAAAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\PersonPhone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.PhoneNumberType" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAQAAgAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\PhoneNumberType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Product">
+    <Position X="2.75" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>GIIAAAICAkgAgAVACDIAAERAAiICQAQBDRAghKCAAQA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductModel" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductProductPhoto" />
+      <Property Name="BillOfMaterialsProductAssembly" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductCategory" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAiAACAAAA=</HashCode>
+      <FileName>Models\ProductCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductCostHistory" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAgAAAAAAAAAAgAgAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\ProductCostHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductDescription" Collapsed="true">
+    <Position X="26.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAgAIAAAAAAAAAAAgAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\ProductDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductInventory" Collapsed="true">
+    <Position X="28" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAKAAAAAAAAAAAACAIAAAAAAgAAAAAAAIAAgACAAAA=</HashCode>
+      <FileName>Models\ProductInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductListPriceHistory" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIACAAAAAAAAAAAAAAAAAAAgAgAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\ProductListPriceHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductModel">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIQAAAAAAAQACgAIAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\ProductModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductModelIllustration" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAQAACAABAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProductModelIllustration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductModelProductDescriptionCulture" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAQAACAAAAABAwAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Models\ProductModelProductDescriptionCulture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductPhoto" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAgAAAAAAAAAAAACACgAEAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\ProductPhoto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductProductPhoto" Collapsed="true">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAQCAAAA=</HashCode>
+      <FileName>Models\ProductProductPhoto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductReview" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAABAAAAgAAAAAAAAAAgAAAAEAAAAAAgAAMAA=</HashCode>
+      <FileName>Models\ProductReview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductSubcategory" Collapsed="true">
+    <Position X="24.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAEQAAgAAAAAAAAACAACAEAA=</HashCode>
+      <FileName>Models\ProductSubcategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ProductVendor" Collapsed="true">
+    <Position X="26.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACCABAAAIAEAAAAAAEEAIIAgCAAAAACAIAAAAAAAA=</HashCode>
+      <FileName>Models\ProductVendor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.PurchaseOrderDetail" Collapsed="true">
+    <Position X="28" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAACAAAAAAAAACAAhAAABIAAAgAAACAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\PurchaseOrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.PurchaseOrderHeader" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAREAAAAAAAAAAgQIAAACgAAACRIAAAAAAAKAAA=</HashCode>
+      <FileName>Models\PurchaseOrderHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesOrderDetail" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAQAAAACAAgAAAAABAAwAAAEAEABAgAACAAAA=</HashCode>
+      <FileName>Models\SalesOrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesOrderHeader" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAEAAYRECBIAACEAAQgQIAEgAkoAQBRIIBAgICCAAgA=</HashCode>
+      <FileName>Models\SalesOrderHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesOrderHeaderSalesReason" Collapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAgAAACAAAIAgAAAAAAA=</HashCode>
+      <FileName>Models\SalesOrderHeaderSalesReason.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesPerson" Collapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAEIAgAABAAAAAAEgAgBAAACACAAACQCAAAA=</HashCode>
+      <FileName>Models\SalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesPersonQuotaHistory" Collapsed="true">
+    <Position X="24.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAEAAAgAAAACACAAAAACAAAA=</HashCode>
+      <FileName>Models\SalesPersonQuotaHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesReason" Collapsed="true">
+    <Position X="26.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAABAAAAAAAAAAAAQAAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SalesReason.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesTaxRate" Collapsed="true">
+    <Position X="28" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAACAAIEAAAQAAgAAACAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\SalesTaxRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesTerritory" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAEAAIEgAAAEBAAAAAAUAAgBAAAAAAAAAKACIAAA=</HashCode>
+      <FileName>Models\SalesTerritory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SalesTerritoryHistory" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAEgAgAAAAAACAAAAECAAAA=</HashCode>
+      <FileName>Models\SalesTerritoryHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ScrapReason" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAACAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ScrapReason.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Shift" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAQAIgAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Shift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ShipMethod" Collapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAIAAAAAAAAAAAQAAgACAAAIAAAACACAAAA=</HashCode>
+      <FileName>Models\ShipMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.ShoppingCartItem" Collapsed="true">
+    <Position X="24.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAEAAAAAAAQgAAAAAAAAAEgAAAAAA=</HashCode>
+      <FileName>Models\ShoppingCartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SpecialOffer" Collapsed="true">
+    <Position X="26.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAQAAgAwAAAgAAARACAECACAA=</HashCode>
+      <FileName>Models\SpecialOffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.SpecialOfferProduct" Collapsed="true">
+    <Position X="28" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAIAAAAAAAAAAAAAAwAAAAgAAAAAAACAAAA=</HashCode>
+      <FileName>Models\SpecialOfferProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.StateProvince" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAECAAUgAgAAAgACQAAAAACIAAA=</HashCode>
+      <FileName>Models\StateProvince.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Store" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAIAAAEAAAAAAAQAAgAAAEAACBAAAACAAAA=</HashCode>
+      <FileName>Models\Store.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.TransactionHistory" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAgAAAAAIAAAAACAAAAAAAgAAAAEAAAAAkAAABAA=</HashCode>
+      <FileName>Models\TransactionHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.TransactionHistoryArchive" Collapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAgAAAAAIAAAAACAAAAAAAgAAAAEAAAAAkAAABAA=</HashCode>
+      <FileName>Models\TransactionHistoryArchive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.UnitMeasure" Collapsed="true">
+    <Position X="22.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAECAAAAAAAAAAAAEIQAAgAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\UnitMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.Vendor" Collapsed="true">
+    <Position X="24.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAACAAIAAQAAAAgAAAQAAggDAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vendor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.WorkOrder" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UABCAAAAAAAAACAAiAAAAAAgAgAAAAAAAAAAAEIBAAA=</HashCode>
+      <FileName>Models\WorkOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AwesomeDotNetCore.Data.Models.WorkOrderRouting">
+    <Position X="10.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>GAAIAAAAQAAAAAAACAIAQBAAAkAAAAAAAAABAAgBBAA=</HashCode>
+      <FileName>Models\WorkOrderRouting.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+      <Property Name="WorkOrder" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

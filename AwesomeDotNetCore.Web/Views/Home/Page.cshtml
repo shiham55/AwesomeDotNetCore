@@ -1,0 +1,16 @@
+﻿@using AwesomeDotNetCore.Data.Models;
+@{
+    ViewData["Title"] = "Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Store>;
+
+<h1>Page</h1>
+
+<ul class="list-group">
+    @foreach (Store store in Model)
+    {
+        <li class="list-group-item">@store.Name</li>
+    }
+</ul>
