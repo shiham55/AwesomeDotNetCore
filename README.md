@@ -1,5 +1,4 @@
-[![Build status](https://dev.azure.com/ShihamMohamed/AwesomeDotNetCore/_apis/build/status/AwesomeDotNetCore-dev%20-%20CI)](https://dev.azure.com/ShihamMohamed/AwesomeDotNetCore/_build/latest?definitionId=2)
-
+[![Build Status](https://dev.azure.com/EY-Digital-Singapore/AwesomeDotNetCore/_apis/build/status/AwesomeDotNetCore-UAT%20-%20CI?branchName=master)](https://dev.azure.com/EY-Digital-Singapore/AwesomeDotNetCore/_build/latest?definitionId=2&branchName=master)
 # Introduction 
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
