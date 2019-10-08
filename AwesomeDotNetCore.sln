@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{F27AA441-8A6A-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DA59E2BA-2364-46E4-8084-A9067323A636}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore", "AwesomeDotNetCore.Web\AwesomeDotNetCore.csproj", "{821EE248-FE45-4C80-B86C-E2889DD0AA92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore", "src\AwesomeDotNetCore.Web\AwesomeDotNetCore.csproj", "{821EE248-FE45-4C80-B86C-E2889DD0AA92}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7ADC4E3E-7EB1-4333-9B28-B42849C1968A}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FE98EF1D-05C0-41C8-B24C-FBACD668C2A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore.Data", "AwesomeDotNetCore.Data\AwesomeDotNetCore.Data.csproj", "{C77BDAAF-C529-4898-BC45-031BB364B609}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore.Data", "src\AwesomeDotNetCore.Data\AwesomeDotNetCore.Data.csproj", "{C77BDAAF-C529-4898-BC45-031BB364B609}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
