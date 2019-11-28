@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{F27AA441-8A6A-4B76-AEB6-07A3310A0442}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DA59E2BA-2364-46E4-8084-A9067323A636}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore", "src\AwesomeDotNetCore.Web\AwesomeDotNetCore.csproj", "{821EE248-FE45-4C80-B86C-E2889DD0AA92}"
