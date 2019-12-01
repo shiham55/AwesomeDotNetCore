@@ -30,17 +30,13 @@ namespace AwesomeDotNetCore
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<AdventureWorks2017Context>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("AdventureWorksConnection")));
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<AdventureWorks2017Context>();
 
             services.AddRouting(options => options.LowercaseUrls = true);
 

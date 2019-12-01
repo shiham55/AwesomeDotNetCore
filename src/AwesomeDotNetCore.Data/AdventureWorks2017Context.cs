@@ -1,11 +1,11 @@
 ﻿using System;
 using AwesomeDotNetCore.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AwesomeDotNetCore.Data
 {
-    public partial class AdventureWorks2017Context : DbContext
+    public partial class AdventureWorks2017Context : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
     {
         public AdventureWorks2017Context()
         {
@@ -15,6 +15,10 @@ namespace AwesomeDotNetCore.Data
             : base(options)
         {
         }
+
+        #region DbSets
+        public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public virtual DbSet<ApplicationUserRole> ApplicationUserRole { get; set; }
 
         public virtual DbSet<Address> Address { get; set; }
         public virtual DbSet<AddressType> AddressType { get; set; }
@@ -88,7 +92,7 @@ namespace AwesomeDotNetCore.Data
 
         // Unable to generate entity type for table 'Production.ProductDocument'. Please see the warning messages.
         // Unable to generate entity type for table 'Production.Document'. Please see the warning messages.
-
+        #endregion
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -100,7 +104,13 @@ namespace AwesomeDotNetCore.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUsers");
+
+            modelBuilder.Entity<ApplicationUserRole>().ToTable("AspNetRoles");
 
             modelBuilder.Entity<Address>(entity =>
             {
