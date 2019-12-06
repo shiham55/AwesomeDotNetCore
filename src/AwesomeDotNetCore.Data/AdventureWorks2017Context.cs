@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -97,8 +98,7 @@ namespace AwesomeDotNetCore.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=SG2327780W2\\SQLSTANDARD2017;Initial Catalog=AdventureWorks2017;Persist Security Info=True;User ID=dbadmin;Password=AtmLg69K;");
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["AdventureWorksConnection"].ConnectionString);
             }
         }
 
