@@ -3,13 +3,17 @@ using System.Configuration;
 using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace AwesomeDotNetCore.Data
 {
     public partial class AdventureWorks2017Context : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
     {
-        public AdventureWorks2017Context()
+        IConfiguration Configuration;
+
+        public AdventureWorks2017Context(IConfiguration config)
         {
+            Configuration = config;
         }
 
         public AdventureWorks2017Context(DbContextOptions<AdventureWorks2017Context> options)
@@ -98,7 +102,9 @@ namespace AwesomeDotNetCore.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["AdventureWorksConnection"].ConnectionString);
+                string connectionString = ConfigurationExtensions.GetConnectionString(this.Configuration, "AdventureWorksConnection");
+
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

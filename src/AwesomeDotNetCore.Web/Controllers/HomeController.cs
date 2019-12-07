@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AwesomeDotNetCore.Data;
+using AwesomeDotNetCore.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using AwesomeDotNetCore.Models;
-using AwesomeDotNetCore.Data;
-using AwesomeDotNetCore.Data.Models;
 
 namespace AwesomeDotNetCore.Controllers
 {
     public class HomeController : Controller
     {
-        AdventureWorks2017Context _context = new AdventureWorks2017Context();
+        private readonly AdventureWorks2017Context _dbContext;
+        private readonly IConfiguration _configuration;
+
+        public HomeController(IConfiguration config)
+        {
+            _configuration = config;
+            _dbContext = new AdventureWorks2017Context(_configuration);
+        }
 
         public IActionResult Index()
         {
@@ -26,7 +30,7 @@ namespace AwesomeDotNetCore.Controllers
 
         public IActionResult Page()
         {
-            return View(_context.Store.ToList());
+            return View(_dbContext.Store.ToList());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
