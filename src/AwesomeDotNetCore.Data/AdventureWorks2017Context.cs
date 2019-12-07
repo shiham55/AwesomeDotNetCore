@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Configuration;
 using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace AwesomeDotNetCore.Data
 {
     public partial class AdventureWorks2017Context : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
     {
-        public AdventureWorks2017Context()
+        IConfiguration Configuration;
+
+        public AdventureWorks2017Context(IConfiguration config)
         {
+            Configuration = config;
         }
 
         public AdventureWorks2017Context(DbContextOptions<AdventureWorks2017Context> options)
@@ -97,8 +102,9 @@ namespace AwesomeDotNetCore.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=SG2327780W2\\SQLSTANDARD2017;Initial Catalog=AdventureWorks2017;Persist Security Info=True;User ID=dbadmin;Password=AtmLg69K;");
+                string connectionString = ConfigurationExtensions.GetConnectionString(this.Configuration, "AdventureWorksConnection");
+
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 
