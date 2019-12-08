@@ -1,4 +1,5 @@
 ﻿using AwesomeDotNetCore.Data;
+using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,8 +36,7 @@ namespace AwesomeDotNetCore
                 options.UseSqlServer(
                     Configuration.GetConnectionString("AdventureWorksConnection")));
 
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<AdventureWorks2017Context>();
+            services.AddDefaultIdentity<ApplicationUser>().AddRoles<ApplicationUserRole>().AddEntityFrameworkStores<AdventureWorks2017Context>();
 
             services.AddRouting(options => options.LowercaseUrls = true);
 

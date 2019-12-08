@@ -33,6 +33,11 @@ namespace AwesomeDotNetCore.Controllers
             return View(_dbContext.Store.ToList());
         }
 
+        public IActionResult Products()
+        {
+            return View(_dbContext.Product.ToList());
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
