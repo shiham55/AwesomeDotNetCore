@@ -1,5 +1,6 @@
 ﻿using AwesomeDotNetCore.Data;
 using AwesomeDotNetCore.Data.Models;
+using AwesomeDotNetCore.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,9 +28,9 @@ namespace AwesomeDotNetCore
 
             services.Configure<CookiePolicyOptions>(options => { options.CheckConsentNeeded = context => true; options.MinimumSameSitePolicy = SameSiteMode.None; });
 
-            services.AddDbContext<AdventureWorks2017Context>(options => options.UseSqlServer(Configuration["ConnectionStrings:AdventureWorksConnection"]));
+            services.AddDbContext<AdventureWorks>(options => options.UseSqlServer(Configuration["ConnectionStrings:AdventureWorksConnection"]));
 
-            services.AddDefaultIdentity<ApplicationUser>().AddRoles<ApplicationUserRole>().AddEntityFrameworkStores<AdventureWorks2017Context>();
+            services.AddDefaultIdentity<ApplicationUser>().AddRoles<ApplicationUserRole>().AddEntityFrameworkStores<AdventureWorks>();
 
             services.AddRouting(options => options.LowercaseUrls = true);
 
@@ -38,6 +39,12 @@ namespace AwesomeDotNetCore
             services.AddRazorPages();
 
             //services.AddApplicationInsightsTelemetry();
+
+            services.AddScoped<DbContext, AdventureWorks>();
+
+            //services.AddScoped<IRepository<Product>, ProductRepository>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 
         // configure the HTTP request pipeline.

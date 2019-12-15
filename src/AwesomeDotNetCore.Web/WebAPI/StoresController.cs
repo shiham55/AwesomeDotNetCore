@@ -14,9 +14,9 @@ namespace AwesomeDotNetCore.WebAPI
     [ApiController]
     public class StoresController : ControllerBase
     {
-        private readonly AdventureWorks2017Context _context;
+        private readonly AdventureWorks _context;
 
-        public StoresController(AdventureWorks2017Context context)
+        public StoresController(AdventureWorks context)
         {
             _context = context;
         }

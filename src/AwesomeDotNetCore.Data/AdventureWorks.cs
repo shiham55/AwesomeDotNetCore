@@ -1,20 +1,18 @@
-﻿using System;
-using System.Configuration;
-using AwesomeDotNetCore.Data.Models;
+﻿using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace AwesomeDotNetCore.Data
 {
-    public partial class AdventureWorks2017Context : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
+    public partial class AdventureWorks : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
     {
-        
-        public AdventureWorks2017Context()
+        #region Constructor
+        public AdventureWorks()
         {
         }
+        #endregion
 
-        public AdventureWorks2017Context(DbContextOptions<AdventureWorks2017Context> options)
+        public AdventureWorks(DbContextOptions<AdventureWorks> options)
             : base(options)
         {
         }
@@ -97,6 +95,7 @@ namespace AwesomeDotNetCore.Data
         // Unable to generate entity type for table 'Production.Document'. Please see the warning messages.
         #endregion
 
+        #region Overrides
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -2614,5 +2613,6 @@ namespace AwesomeDotNetCore.Data
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
         }
+        #endregion
     }
 }

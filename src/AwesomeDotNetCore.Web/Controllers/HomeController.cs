@@ -1,21 +1,21 @@
-﻿using AwesomeDotNetCore.Data;
+﻿using AwesomeDotNetCore.Data.Models;
+using AwesomeDotNetCore.Data.Repository;
 using AwesomeDotNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
-using System.Linq;
 
 namespace AwesomeDotNetCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AdventureWorks2017Context _dbContext;
+        private readonly IRepository<Product> _productRepository;
         private readonly IConfiguration _configuration;
 
-        public HomeController(IConfiguration config, AdventureWorks2017Context dbContext)
+        public HomeController(IConfiguration config, IRepository<Product> productRepository)
         {
             _configuration = config;
-            _dbContext = dbContext;
+            _productRepository = productRepository;
         }
 
         public IActionResult Index()
@@ -30,12 +30,16 @@ namespace AwesomeDotNetCore.Controllers
 
         public IActionResult Page()
         {
-            return View(_dbContext.Store.ToList());
+            return View();
         }
 
         public IActionResult Products()
         {
-            return View(_dbContext.Product.ToList());
+            var allProducts = _productRepository.Get(includeProperties: "BillOfMaterialsComponent");
+
+            var applicationUrl = _configuration["Application:Url"];
+
+            return View(allProducts);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
