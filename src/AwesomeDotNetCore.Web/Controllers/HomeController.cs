@@ -10,12 +10,16 @@ namespace AwesomeDotNetCore.Controllers
     public class HomeController : Controller
     {
         private readonly IRepository<Product> _productRepository;
+        private readonly IRepository<Store> _storeRepository;
         private readonly IConfiguration _configuration;
 
-        public HomeController(IConfiguration config, IRepository<Product> productRepository)
+        public HomeController(IConfiguration config, 
+            IRepository<Product> productRepository,
+            IRepository<Store> storeRepository)
         {
             _configuration = config;
             _productRepository = productRepository;
+            _storeRepository = storeRepository;
         }
 
         public IActionResult Index()
@@ -28,9 +32,9 @@ namespace AwesomeDotNetCore.Controllers
             return View();
         }
 
-        public IActionResult Page()
+        public IActionResult Stores()
         {
-            return View();
+            return View(_storeRepository.Get());
         }
 
         public IActionResult Products()

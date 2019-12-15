@@ -42,8 +42,6 @@ namespace AwesomeDotNetCore
 
             services.AddScoped<DbContext, AdventureWorks>();
 
-            //services.AddScoped<IRepository<Product>, ProductRepository>();
-
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 
