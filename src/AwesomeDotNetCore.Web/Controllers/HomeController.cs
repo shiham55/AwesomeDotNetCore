@@ -12,10 +12,10 @@ namespace AwesomeDotNetCore.Controllers
         private readonly AdventureWorks2017Context _dbContext;
         private readonly IConfiguration _configuration;
 
-        public HomeController(IConfiguration config)
+        public HomeController(IConfiguration config, AdventureWorks2017Context dbContext)
         {
             _configuration = config;
-            _dbContext = new AdventureWorks2017Context(_configuration);
+            _dbContext = dbContext;
         }
 
         public IActionResult Index()

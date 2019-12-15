@@ -9,11 +9,9 @@ namespace AwesomeDotNetCore.Data
 {
     public partial class AdventureWorks2017Context : IdentityDbContext<ApplicationUser, ApplicationUserRole, string>
     {
-        IConfiguration Configuration;
-
-        public AdventureWorks2017Context(IConfiguration config)
+        
+        public AdventureWorks2017Context()
         {
-            Configuration = config;
         }
 
         public AdventureWorks2017Context(DbContextOptions<AdventureWorks2017Context> options)
@@ -98,13 +96,11 @@ namespace AwesomeDotNetCore.Data
         // Unable to generate entity type for table 'Production.ProductDocument'. Please see the warning messages.
         // Unable to generate entity type for table 'Production.Document'. Please see the warning messages.
         #endregion
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string connectionString = ConfigurationExtensions.GetConnectionString(this.Configuration, "AdventureWorksConnection");
-
-                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 
