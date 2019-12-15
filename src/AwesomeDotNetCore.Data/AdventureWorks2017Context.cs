@@ -213,7 +213,7 @@ namespace AwesomeDotNetCore.Data
             {
                 entity.HasKey(e => e.BillOfMaterialsId)
                     .HasName("PK_BillOfMaterials_BillOfMaterialsID")
-                    .ForSqlServerIsClustered(false);
+                    .IsClustered(false);
 
                 entity.ToTable("BillOfMaterials", "Production");
 
@@ -222,7 +222,7 @@ namespace AwesomeDotNetCore.Data
                 entity.HasIndex(e => new { e.ProductAssemblyId, e.ComponentId, e.StartDate })
                     .HasName("AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate")
                     .IsUnique()
-                    .ForSqlServerIsClustered();
+                    .IsClustered();
 
                 entity.Property(e => e.BillOfMaterialsId).HasColumnName("BillOfMaterialsID");
 
@@ -606,7 +606,7 @@ namespace AwesomeDotNetCore.Data
             {
                 entity.HasKey(e => e.DatabaseLogId)
                     .HasName("PK_DatabaseLog_DatabaseLogID")
-                    .ForSqlServerIsClustered(false);
+                    .IsClustered(false);
 
                 entity.Property(e => e.DatabaseLogId).HasColumnName("DatabaseLogID");
 
@@ -1411,7 +1411,7 @@ namespace AwesomeDotNetCore.Data
             {
                 entity.HasKey(e => new { e.ProductId, e.ProductPhotoId })
                     .HasName("PK_ProductProductPhoto_ProductID_ProductPhotoID")
-                    .ForSqlServerIsClustered(false);
+                    .IsClustered(false);
 
                 entity.ToTable("ProductProductPhoto", "Production");
 

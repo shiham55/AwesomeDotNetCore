@@ -7,8 +7,6 @@ namespace AwesomeDotNetCore.Data.Models
 {
     public class ApplicationUser : IdentityUser<string>
     {
-        public string Id { get; set; }
-
         public ApplicationUser()
         {
         }
