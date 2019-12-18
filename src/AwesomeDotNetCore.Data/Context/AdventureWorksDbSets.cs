@@ -82,8 +82,9 @@ namespace AwesomeDotNetCore.Data.Context
         public virtual DbSet<WorkOrder> WorkOrder { get; set; }
         public virtual DbSet<WorkOrderRouting> WorkOrderRouting { get; set; }
 
-        // Unable to generate entity type for table 'Production.ProductDocument'. Please see the warning messages.
-        // Unable to generate entity type for table 'Production.Document'. Please see the warning messages.
+
+        public virtual DbSet<Player> Players { get; set; }
+        public virtual DbSet<Team> Team { get; set; }
         #endregion
     }
 }

@@ -6,6 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+src/AwesomeDotNetCore.Web/appsettings.Development.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
