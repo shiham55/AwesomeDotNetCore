@@ -13,7 +13,7 @@ namespace AwesomeDotNetCore.Data.Models
         }
 
         public int Id { get; set; }
-        public int Name { get; set; }
+        public string Name { get; set; }
         public virtual ICollection<Player> Players { get; set; }
     }
 }

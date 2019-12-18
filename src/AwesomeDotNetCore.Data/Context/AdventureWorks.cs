@@ -1,6 +1,7 @@
 ﻿using AwesomeDotNetCore.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AwesomeDotNetCore.Data
 {
@@ -2534,6 +2535,42 @@ namespace AwesomeDotNetCore.Data
                     .HasForeignKey(d => d.WorkOrderId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
+
+            modelBuilder.Entity<Player>(entity =>
+            {
+                entity.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int")
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                entity.Property<string>("Name")
+                    .HasColumnType("nvarchar(max)");
+
+                entity.Property<int?>("TeamId")
+                    .HasColumnType("int");
+
+                entity.HasKey("Id");
+
+                entity.HasIndex("TeamId");
+
+                entity.ToTable("Player", "Play");
+            });
+
+            modelBuilder.Entity<Team>(entity =>
+            {
+                entity.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int")
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                entity.Property<string>("Name")
+                    .HasColumnType("nvarchar(max)");
+
+                entity.HasKey("Id");
+
+                entity.ToTable("Team", "Play");
+            });
+
         }
         #endregion
     }
