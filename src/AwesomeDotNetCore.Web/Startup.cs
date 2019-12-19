@@ -43,6 +43,8 @@ namespace AwesomeDotNetCore
             services.AddScoped<DbContext, AdventureWorks>();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
+            services.AddScoped(typeof(IAdventureWorksUnit), typeof(AdventureWorksUnit));
         }
 
         // configure the HTTP request pipeline.
