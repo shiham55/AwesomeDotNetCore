@@ -24,18 +24,16 @@ namespace AwesomeDotNetCore.Controllers
             IRepository<Team> _teamRepo = _unitOfWork.GetRepository<Team>();
             IRepository<Player> _playerRepo = _unitOfWork.GetRepository<Player>();
 
-            try
-            {
-                var allTeam = _teamRepo.Get();
+            var allTeam = _teamRepo.Get();
 
-                Team team = new Team { Name = "Team 2" };
-                _teamRepo.Insert(team);
+            Team team = new Team { Name = "Team 2" };
+            _teamRepo.Insert(team);
 
-                _unitOfWork.Save();
+            //_unitOfWork.Save();
 
-                allTeam = _teamRepo.Get();
+            allTeam = _teamRepo.Get();
 
-                List<Player> players = new List<Player>
+            List<Player> players = new List<Player>
                 {
                     new Player { Name = "Team 2 Member 1", Team = allTeam.Last() },
                     new Player { Name = "Team 2 Member 2", Team = allTeam.Last() },
@@ -43,20 +41,13 @@ namespace AwesomeDotNetCore.Controllers
                     new Player { Name = "Team 2 Member 4", Team = allTeam.Last() },
                     new Player { Name = "Team 2 Member 5", Team = allTeam.Last() }
                 };
-                
-                _playerRepo.InsertRange(players);
 
-                _unitOfWork.Save();
+            _playerRepo.InsertRange(players);
 
-                allTeam = _teamRepo.Get();
-                var allplayers = _playerRepo.Get();
+            _unitOfWork.Save();
 
-            }
-            catch (Exception ex)
-            {
-                //_unitOfWork.rollback();
-                throw;
-            }
+            allTeam = _teamRepo.Get();
+            var allplayers = _playerRepo.Get();
 
             return View();
         }

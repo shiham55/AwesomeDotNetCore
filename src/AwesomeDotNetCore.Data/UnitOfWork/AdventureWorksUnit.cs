@@ -32,7 +32,7 @@ namespace AwesomeDotNetCore.Data
 
         public void Save()
         {
-            using (var transaction = _dbContext.Database.BeginTransaction())
+            using (var transaction = _dbContext.Database.BeginTransaction(System.Data.IsolationLevel.ReadCommitted))
             {
                 try
                 {

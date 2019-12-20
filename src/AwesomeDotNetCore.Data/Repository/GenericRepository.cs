@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace AwesomeDotNetCore.Data.Repository
 {
-    public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IDisposable, IRepository<TEntity> where TEntity : class
     {
         #region Constants
         private const int DEFAULT_PAGE = 0;
@@ -119,6 +119,27 @@ namespace AwesomeDotNetCore.Data.Repository
         {
             dbSet.Attach(entityToUpdate);
             context.Entry(entityToUpdate).State = EntityState.Modified;
+        }
+        #endregion
+
+        #region Dispose
+        private bool disposed = false;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }
