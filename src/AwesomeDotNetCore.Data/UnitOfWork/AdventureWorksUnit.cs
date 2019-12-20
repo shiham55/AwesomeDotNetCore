@@ -2,6 +2,7 @@
 using AwesomeDotNetCore.Data.Repository;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -31,9 +32,35 @@ namespace AwesomeDotNetCore.Data
 
         public void Save()
         {
-            _dbContext.SaveChanges();
+            using (var transaction = _dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    _dbContext.SaveChanges();
+                    transaction.Commit();
+                }
+                catch (DbUpdateConcurrencyException dbUpdateConcurrencyException)
+                {
+                    //<TODO> : log   
+                    transaction.Rollback();
+                }
+                catch (DbUpdateException dbUpdateExceptoin)
+                {
+                    //<TODO> : log
+                    transaction.Rollback();
+                }
+                catch (Exception ex)
+                {
+                    //<TODO> : log
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    //<TODO> : can log and see io operation stats may be
+                }
+            }
         }
-        
+
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
         {

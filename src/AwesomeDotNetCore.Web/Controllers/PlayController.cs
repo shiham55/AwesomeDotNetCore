@@ -22,32 +22,35 @@ namespace AwesomeDotNetCore.Controllers
         public IActionResult Index()
         {
             IRepository<Team> _teamRepo = _unitOfWork.GetRepository<Team>();
+            IRepository<Player> _playerRepo = _unitOfWork.GetRepository<Player>();
 
             try
             {
-                var all = _teamRepo.Get();
+                var allTeam = _teamRepo.Get();
 
-                Team team = new Team { Name = "Test Team" };
+                Team team = new Team { Name = "Team 2" };
                 _teamRepo.Insert(team);
 
                 _unitOfWork.Save();
 
-                all = _teamRepo.Get();
+                allTeam = _teamRepo.Get();
 
-                List<Team> teams = new List<Team>
+                List<Player> players = new List<Player>
                 {
-                    new Team { Name = "Test Team 2" },
-                    new Team { Name = "Test Team 3" },
-                    new Team { Name = "Test Team 4" },
-                    new Team { Name = "Test Team 5" },
-                    new Team { Name = "Test Team 6" }
+                    new Player { Name = "Team 2 Member 1", Team = allTeam.Last() },
+                    new Player { Name = "Team 2 Member 2", Team = allTeam.Last() },
+                    new Player { Name = "Team 2 Member 3", Team = allTeam.Last() },
+                    new Player { Name = "Team 2 Member 4", Team = allTeam.Last() },
+                    new Player { Name = "Team 2 Member 5", Team = allTeam.Last() }
                 };
                 
-                _teamRepo.InsertRange(teams);
+                _playerRepo.InsertRange(players);
 
                 _unitOfWork.Save();
 
-                all = _teamRepo.Get();
+                allTeam = _teamRepo.Get();
+                var allplayers = _playerRepo.Get();
+
             }
             catch (Exception ex)
             {
