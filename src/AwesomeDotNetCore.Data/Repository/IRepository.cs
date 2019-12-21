@@ -7,26 +7,26 @@ namespace AwesomeDotNetCore.Data.Repository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        public IEnumerable<TEntity> GetWithRawSql(string query, params object[] parameters);
+        IEnumerable<TEntity> GetWithRawSql(string query, params object[] parameters);
 
-        public  IEnumerable<TEntity> Get(
+        IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "");
 
-        public  TEntity GetByID(object id);
+        TEntity GetByID(object id);
 
-        public  void Insert(TEntity entity);
+        void Insert(TEntity entity);
 
-        public  void InsertRange(List<TEntity> entity);
+        void InsertRange(List<TEntity> entity);
 
-        public  void Delete(int id);
+        void Delete(int id);
 
-        public  void Delete(TEntity entityToDelete);
+        void Delete(TEntity entityToDelete);
 
-        public  void Update(TEntity entityToUpdate);
+        void Update(TEntity entityToUpdate);
 
-        public  IEnumerable<TEntity> GetPage(
+        IEnumerable<TEntity> GetPage(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "",
