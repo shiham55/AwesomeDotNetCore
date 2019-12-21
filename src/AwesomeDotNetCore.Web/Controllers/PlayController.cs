@@ -29,7 +29,7 @@ namespace AwesomeDotNetCore.Controllers
             Team team = new Team { Name = "Team 2" };
             _teamRepo.Insert(team);
 
-            //_unitOfWork.Save();
+            _unitOfWork.Save();
 
             allTeam = _teamRepo.Get();
 

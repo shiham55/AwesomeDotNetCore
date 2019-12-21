@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FE98EF1D-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeDotNetCore.Data", "src\AwesomeDotNetCore.Data\AwesomeDotNetCore.Data.csproj", "{C77BDAAF-C529-4898-BC45-031BB364B609}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeDotNetCore.Service", "src\AwesomeDotNetCore.Service\AwesomeDotNetCore.Service.csproj", "{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{C77BDAAF-C529-4898-BC45-031BB364B609}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77BDAAF-C529-4898-BC45-031BB364B609}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77BDAAF-C529-4898-BC45-031BB364B609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{821EE248-FE45-4C80-B86C-E2889DD0AA92} = {DA59E2BA-2364-46E4-8084-A9067323A636}
 		{C77BDAAF-C529-4898-BC45-031BB364B609} = {FE98EF1D-05C0-41C8-B24C-FBACD668C2A3}
+		{5C555E6E-4D4D-4A6D-B1A2-D7BEDE2D47C2} = {FE98EF1D-05C0-41C8-B24C-FBACD668C2A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {224EABCA-4120-4274-BBB9-898D3D47FBEF}
