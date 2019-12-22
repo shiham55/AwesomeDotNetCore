@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AwesomeDotNetCore.Common.Base;
 using AwesomeDotNetCore.Data;
 using AwesomeDotNetCore.Data.Models;
 using AwesomeDotNetCore.Data.Repository;
@@ -10,28 +11,23 @@ using Microsoft.Extensions.Configuration;
 
 namespace AwesomeDotNetCore.Controllers
 {
-    public class PlayController : Controller
+    public class PlayController : BaseController
     {
-        private readonly IAdventureWorksUnit _unitOfWork;
-
-        public PlayController(IAdventureWorksUnit unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
+        public PlayController(IAdventureWorksUnit unitOfWork) : base(unitOfWork) { }
 
         public IActionResult Index()
         {
-            IRepository<Team> _teamRepo = _unitOfWork.GetRepository<Team>();
-            IRepository<Player> _playerRepo = _unitOfWork.GetRepository<Player>();
+            var teamRepo = _unitOfWork.GetRepository<Team>();
+            var playerRepo = _unitOfWork.GetRepository<Player>();
 
-            var allTeam = _teamRepo.Get();
+            var allTeam = teamRepo.Get();
 
             Team team = new Team { Name = "Team 2" };
-            _teamRepo.Insert(team);
+            teamRepo.Insert(team);
 
             _unitOfWork.Save();
 
-            allTeam = _teamRepo.Get();
+            allTeam = teamRepo.Get();
 
             List<Player> players = new List<Player>
                 {
@@ -42,12 +38,12 @@ namespace AwesomeDotNetCore.Controllers
                     new Player { Name = "Team 2 Member 5", Team = allTeam.Last() }
                 };
 
-            _playerRepo.InsertRange(players);
+            playerRepo.InsertRange(players);
 
             _unitOfWork.Save();
 
-            allTeam = _teamRepo.Get();
-            var allplayers = _playerRepo.Get();
+            allTeam = teamRepo.Get();
+            var allplayers = playerRepo.Get();
 
             return View();
         }
