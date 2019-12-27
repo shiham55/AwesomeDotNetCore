@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AwesomeDotNetCore.Data\AwesomeDotNetCore.Data.csproj" />
+    <ProjectReference Include="..\AwesomeDotNetCore.Service\AwesomeDotNetCore.Service.csproj" />
   </ItemGroup>
 
 
