@@ -29,13 +29,18 @@ namespace AwesomeDotNetCore.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Email()
+        {
             SendGrid.Helpers.Mail.EmailAddress From = new SendGrid.Helpers.Mail.EmailAddress("shiham55@gmail.com", "Shiham M");
             SendGrid.Helpers.Mail.EmailAddress ReplyTo = new SendGrid.Helpers.Mail.EmailAddress("shiham.mohamed@sg.ey.com");
             string Subject = "Testing SendGrid Email Service";
             string HtmlContent = "<p>This is a Test!</p>";
             string PlainTextContent = "This is a Test!";
 
-            var msg  = MailHelper.CreateSingleEmail(From, ReplyTo, Subject, PlainTextContent, HtmlContent);
+            var msg = MailHelper.CreateSingleEmail(From, ReplyTo, Subject, PlainTextContent, HtmlContent);
 
             _emailService.Send(msg);
 
