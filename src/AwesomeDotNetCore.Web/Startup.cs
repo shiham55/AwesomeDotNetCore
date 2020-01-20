@@ -1,6 +1,7 @@
 ﻿using AwesomeDotNetCore.Data;
 using AwesomeDotNetCore.Data.Models;
 using AwesomeDotNetCore.Data.Repository;
+using AwesomeDotNetCore.Service.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,6 +46,8 @@ namespace AwesomeDotNetCore
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddScoped(typeof(IAdventureWorksUnit), typeof(AdventureWorksUnit));
+
+            services.AddSingleton<IEmailService>(new EmailService(Configuration["SendGridApiKey"]));
         }
 
         // configure the HTTP request pipeline.

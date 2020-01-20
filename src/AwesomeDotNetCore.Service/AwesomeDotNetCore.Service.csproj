@@ -9,4 +9,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Sendgrid" Version="9.12.0" />
+  </ItemGroup>
+
 </Project>
