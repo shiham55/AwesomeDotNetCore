@@ -38,4 +38,9 @@
     <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Common\FilterAttributes\" />
+  </ItemGroup>
+
 </Project>
